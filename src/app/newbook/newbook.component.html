@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="newbook.component.css">
+
+
+<div class='card'>
+    <form (ngSubmit)="AddBook()" #newbook="ngForm">
+<div class='card-header'>
+<h2>{{title}}</h2> 
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>Book Title</label></td>
+              <td><input style="width: 100%;" type="text" name="b_title" [(ngModel)]="bookItem.title"  required minlength="4" autocomplete="off" /></td>                  
+            </tr>   
+            <tr>
+                <td><label>Author Name</label></td>
+                <td><input style="width: 100%;" type="text" name="b_author" [(ngModel)]="bookItem.author" required minlength="4" autocomplete="off"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Genre</label></td>
+                <td><input style="width: 100%;" type="text" name="b_genre" [(ngModel)]="bookItem.genere" required minlength="3" autocomplete="off"/></td>                  
+              </tr>  
+               
+              <tr>
+                <td><label>Book imageUrl</label></td>
+                <td><input style="width: 100%;" type="text" name="b_image" [(ngModel)]="bookItem.imageUrl" required  autocomplete="off"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input class="btn-submit bg-dark" type="submit" [disabled]="newbook.form.invalid" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

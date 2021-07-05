@@ -1,0 +1,25 @@
+
+.navbar a{
+    color: azure;
+    cursor:pointer;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+
+.head {
+    position: fixed; 
+    top: 0; 
+    color: azure;
+    overflow: hidden; 
+     width: 100%; 
+     left: 0; 
+     right: 0;
+     z-index: 1;
+    
+   
+}
+h1{
+    padding-top: 10px;
+    color: azure;
+}

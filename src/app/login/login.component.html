@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="login.component.css">
+
+
+<div class="py-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <span class="anchor" id="formLogin"></span>
+  
+        <!-- form card login -->
+        <div class="card rounded-0">
+          <div class="card-header">
+            <h3 class="mb-0">Login</h3>
+          </div>
+          <div class="card-body">
+            <form #userlogin="ngForm" (ngSubmit)="loginUser()">
+              <div >
+                <label for="email">Email</label>
+                <input type="email" #email="ngModel" [class.is-invalid]="email.invalid && email.touched" name="email" [(ngModel)]="user.email" pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}" required autocomplete="off"/>
+                <small class="text-danger" [class.d-none]="email.valid || email.touched" >Enter Valid email</small>
+                </div>
+              <div>
+                <label>Password</label>
+                <input type="password" name="password" [(ngModel)]="user.password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}" required/>
+                </div>
+              
+              <button type="submit" class="btn btn-dark " [disabled]="userlogin.form.invalid">Login</button>
+            </form>                             
+          </div>
+          <!--/card-block-->
+        </div>
+        <!-- /form card login -->
+  
+      </div>
+  
+  
+    </div>
+  </div>

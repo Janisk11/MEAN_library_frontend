@@ -1,0 +1,35 @@
+<div class='card'>
+    <form (ngSubmit)="editAuthor()" #updateauthor="ngForm">
+<div class='card-header'>
+ <h2>{{title}}</h2>
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+         
+          <tr>
+              <td><label>Author Name</label></td>
+              <td><input style="width: 100%;" type="text" name="b_author" [(ngModel)]="authorItem.author" required minlength="4" autocomplete="off"/></td>                  
+            </tr>  
+             
+             
+            <tr>
+              <td><label>Author imageUrl</label></td>
+              <td><input style="width: 100%;" type="text" name="b_image" [(ngModel)]="authorItem.imageUrl" required  autocomplete="off"/></td>                  
+            </tr>  
+            <tr>
+                <td><label>About</label></td>
+                <td><input style="width: 100%;" type="text" name="b_genre" [(ngModel)]="authorItem.about" required minlength="3" autocomplete="off"/></td>                  
+              </tr> 
+            <tr>
+              <td></td>
+              <td><input class="btn-submit bg-dark" type="submit" [disabled]="updateauthor.form.invalid" value="Submit" /></td>                  
+            </tr>               
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

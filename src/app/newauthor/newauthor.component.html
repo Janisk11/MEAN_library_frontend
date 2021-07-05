@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="newauthor.component.css">
+
+
+<div class='card'>
+    <form (ngSubmit)="AddAuthor()" #newauthor="ngForm">
+<div class='card-header'>
+  <h2>{{title}}</h2> 
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+            
+            <tr>
+                <td><label>Author Name</label></td>
+                <td><input style="width: 100%;" type="text" name="a_author" [(ngModel)]="authorItem.author" minlength="4" required autocomplete="off"/></td>                  
+              </tr>  
+             
+               
+              <tr>
+                <td><label>Author imageUrl</label></td>
+                <td><input style="width: 100%;" type="text" name="a_image" [(ngModel)]="authorItem.imageUrl" required autocomplete="off"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>About the Author</label></td>
+                <td><input style="width: 100%;" type="text" name="a_about" [(ngModel)]="authorItem.about" minlength="8" required autocomplete="off"/></td>                  
+              </tr> 
+              <tr>
+                <td></td>
+                <td><input class="btn-submit bg-dark" [disabled]="newauthor.form.invalid" type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>
