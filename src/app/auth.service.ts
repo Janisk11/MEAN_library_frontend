@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 loginUser(user:any){
-  // return this.http.post<any>("http://localhost:3000/login",user)
-  return this.http.post<any>("/api/login",user)
+  return this.http.post<any>("http://localhost:3000/login",user)
+  // return this.http.post<any>("/api/login",user)
 
 
 }
